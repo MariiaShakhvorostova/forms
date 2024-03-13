@@ -1,0 +1,25 @@
+.agreement label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.agreement p {
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  font-size: 12px;
+}
+
+.agreement .checkbox {
+  display: none;
+}
+
+.agreement .checkbox:checked + label img {
+  content: url("/src/assets/bird.png");
+}

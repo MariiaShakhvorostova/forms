@@ -1,0 +1,95 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(31, 31, 31);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+.root {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+}
+
+.controlled,
+.uncontrolled,
+.formik-form {
+  width: 400px;
+  height: 500px;
+  border-radius: 8px;
+  border: 2px solid rgba(69, 69, 69, 1);
+  background-color: rgba(49, 49, 49, 1);
+  padding: 20px 30px;
+}
+
+.p-main {
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-weight: 500;
+  line-height: 38px;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+.pass-icon {
+  position: relative;
+  left: 275px;
+  top: -38px;
+}
+
+.line {
+  width: 300px;
+  height: 1px;
+  background-color: rgba(115, 115, 115, 1);
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+.pass-container {
+  position: relative;
+}
+
+.pass-container:focus-within + .line {
+  background-color: white;
+}
+
+.toggle-pass {
+  display: none;
+}
+
+.pass-icon {
+  position: absolute;
+  width: 60px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.eye-icon {
+  width: 20px;
+  height: auto;
+}
+
+.toggle-pass:checked + .pass-icon .eye-icon {
+  content: url("/src/assets/opened-eye.png");
+}
+
+.pass-container .toggle-pass:checked ~ .inputs[type="password"] {
+  display: none;
+}
+
+.pass-container .toggle-pass:checked ~ .inputs[type="text"] {
+  display: block;
+}
